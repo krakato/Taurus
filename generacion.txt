@@ -1,0 +1,136 @@
+Registro de generacion del proyecto SearchWeb
+Fecha: 10 de abril de 2026
+
+1. Objetivo inicial
+- Se solicito crear una aplicacion web en esta carpeta con un buscador tipo Google.
+- El buscador debia permitir escribir palabras clave y buscar en internet.
+- Los resultados debian mostrarse en bloques con borde.
+- Cada resultado podia incluir texto, imagen previa y enlace a la pagina encontrada.
+- Se aceptaba usar JavaScript, Python, TypeScript o PHP.
+- Se permitia guardar informacion provisional en archivos JSON.
+
+2. Estructura inicial creada
+- Se creo un backend en Python con Flask.
+- Se creo una plantilla HTML principal.
+- Se creo un archivo JavaScript para la logica del buscador.
+- Se creo una hoja de estilos CSS para la interfaz.
+- Se creo un archivo requirements.txt con dependencias.
+- Se creo un archivo JSON para cache e historial provisional de busquedas.
+
+3. Archivos principales generados
+- app.py
+- templates/index.html
+- static/app.js
+- static/styles.css
+- requirements.txt
+- data/search-cache.json
+
+4. Primera implementacion funcional
+- Se construyo una API local en Flask con una ruta principal para la interfaz.
+- Se implemento la ruta /api/search para buscar en la web.
+- Se uso primero duckduckgo-search como proveedor de busqueda.
+- Se extrajeron titulos, snippets, urls e imagenes de previsualizacion desde metadatos HTML y etiquetas img.
+- Se guardaron los resultados en JSON como cache provisional.
+- Se creo una interfaz visual de buscador inspirada en un layout de buscador moderno.
+
+5. Ajuste del proveedor de busqueda
+- La libreria inicial devolvia resultados vacios o presentaba advertencias de renombrado.
+- Se cambio el proveedor a ddgs.
+- Se actualizo app.py para usar DDGS desde la libreria nueva.
+- Se actualizo requirements.txt para reflejar el nuevo proveedor.
+- Se valido que la API devolviera resultados reales.
+
+6. Ajustes de rendimiento y estabilidad
+- Se paralelizo la extraccion de imagenes usando ThreadPoolExecutor.
+- Se alinearon dependencias con el interprete Python real usado por la aplicacion.
+- Se realizaron pruebas locales mediante cliente de Flask y peticiones HTTP.
+
+7. Mejora de la interfaz e historial de busquedas
+- Se elimino el texto informativo bajo el formulario que decia que la busqueda consultaba la web y guardaba resultados provisionales en JSON.
+- Se sustituyo por un boton para ver las ultimas busquedas guardadas.
+- Se creo la ruta /api/recent-searches para leer el historial desde el JSON.
+- Se agrego un panel desplegable para mostrar las ultimas busquedas en la misma pagina.
+- Cada busqueda guardada paso a ser reutilizable desde la interfaz.
+
+8. Borrado del historial
+- Se agrego un boton para borrar todo el historial del JSON.
+- Se creo la ruta /api/recent-searches/clear.
+- Se incorporo confirmacion en la interfaz antes del borrado completo.
+
+9. Borrado unitario de busquedas
+- Se agrego un boton Borrar en cada elemento del historial.
+- Se creo la ruta /api/recent-searches/item para borrar una busqueda concreta.
+- Se implemento el refresco del panel tras eliminar una entrada individual.
+
+10. Seguridad y advertencia CSP
+- Se reviso una advertencia de Chrome sobre Content Security Policy y unsafe-eval.
+- Se verifico que la aplicacion no estaba enviando una CSP inicialmente.
+- Se confirmo que no habia uso de eval, new Function ni temporizadores con strings.
+- Se endurecio la aplicacion con cabeceras de seguridad en Flask.
+
+11. Cabeceras y politica de seguridad añadidas
+- Se añadieron estas cabeceras en la respuesta HTTP:
+  - Content-Security-Policy
+  - Referrer-Policy
+  - X-Content-Type-Options
+  - X-Frame-Options
+  - Permissions-Policy
+- La CSP se configuro para permitir:
+  - scripts solo desde self
+  - estilos desde self y Google Fonts
+  - fuentes desde self, Google Fonts y data:
+  - imagenes desde self, https y data:
+  - conexiones solo a self
+- Se prohibieron object-src y frame-ancestors inseguros.
+
+12. Meta CSP en HTML
+- Ademas de la cabecera HTTP, se agrego una meta Content-Security-Policy en templates/index.html.
+
+13. Cambio del modo de ejecucion
+- Se detecto que app.py arrancaba con debug fijo.
+- Se cambio para que el modo debug dependa de la variable de entorno FLASK_DEBUG.
+- Se dejo el modo no debug como comportamiento por defecto.
+
+14. Soporte de produccion con Waitress
+- Se preparo la app para usar Waitress cuando no esta en modo debug.
+- Se anadio waitress a requirements.txt.
+- Se instalo Waitress en el interprete correcto.
+- Se valido que el servidor respondiera correctamente en http://127.0.0.1:5000.
+
+15. Documentacion generada
+- Se actualizo README.md para explicar como abrir el proyecto en Chrome.
+- Se documentaron los pasos para arrancar la app desde terminal.
+- Se indico que no debe abrirse el HTML con file:// ni con doble clic porque depende del backend en Python.
+- Tambien se explico que se puede ejecutar desde el terminal integrado de VS Code.
+- Se explico como parar la aplicacion con Ctrl + C desde el terminal donde esta corriendo.
+
+16. Validaciones realizadas durante el proceso
+- Validacion de errores en app.py, static/app.js, static/styles.css y templates/index.html.
+- Validacion de respuesta de /api/search.
+- Validacion de respuesta de /api/recent-searches.
+- Validacion de borrado total de historial.
+- Validacion de borrado unitario de una busqueda del historial.
+- Validacion de cabeceras CSP y seguridad.
+- Validacion del arranque final del servidor con configuracion endurecida.
+
+17. Estado funcional final del proyecto
+- Aplicacion web local operativa.
+- Buscador de internet funcional.
+- Resultados con titulo, snippet, enlace e imagen cuando existe.
+- Historial de busquedas almacenado en JSON.
+- Panel de busquedas recientes reutilizable.
+- Borrado total y borrado individual del historial.
+- CSP y cabeceras de seguridad activas.
+- Arranque preparado para usar Waitress fuera de debug.
+
+18. Archivos relevantes al final del proceso
+- app.py
+- templates/index.html
+- static/app.js
+- static/styles.css
+- requirements.txt
+- data/search-cache.json
+- README.md
+- generacion.txt
+
+Fin del registro.
