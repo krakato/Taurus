@@ -7,6 +7,7 @@ const recentSearchesToggle = document.querySelector('#recent-searches-toggle');
 const recentSearchesPanel = document.querySelector('#recent-searches');
 const recentSearchesList = document.querySelector('#recent-searches-list');
 const recentSearchTemplate = document.querySelector('#recent-search-template');
+const clearHistoryButton = document.querySelector('#clear-history-button');
 
 function setStatus(message, isError = false) {
   statusNode.textContent = message;
@@ -48,14 +49,25 @@ function renderRecentSearches(items) {
 
   items.forEach((item) => {
     const node = recentSearchTemplate.content.firstElementChild.cloneNode(true);
+    const openButton = node.querySelector('.recent-search-open');
+    const deleteButton = node.querySelector('.recent-search-delete');
     const query = node.querySelector('.recent-search-query');
     const meta = node.querySelector('.recent-search-meta');
 
     query.textContent = item.query || 'Busqueda sin texto';
     meta.textContent = `${item.count || 0} resultados · ${formatDate(item.fetchedAt)}`;
-    node.addEventListener('click', () => {
+    openButton.addEventListener('click', () => {
       input.value = item.query || '';
       performSearch(item.query || '');
+    });
+    deleteButton.addEventListener('click', async () => {
+      const confirmed = window.confirm(`Se borrara la busqueda "${item.query || 'sin texto'}" del historial.`);
+
+      if (!confirmed) {
+        return;
+      }
+
+      await deleteRecentSearch(item.query || '');
     });
 
     fragment.appendChild(node);
@@ -81,6 +93,48 @@ async function loadRecentSearches() {
     errorNode.className = 'recent-searches-empty';
     errorNode.textContent = error.message || 'No fue posible cargar las busquedas guardadas.';
     recentSearchesList.appendChild(errorNode);
+  }
+}
+
+async function clearRecentSearches() {
+  try {
+    const response = await fetch('/api/recent-searches/clear', {
+      method: 'POST',
+    });
+    const payload = await response.json();
+
+    if (!response.ok) {
+      throw new Error(payload.error || 'No fue posible borrar el historial.');
+    }
+
+    renderRecentSearches([]);
+    clearResults();
+    setStatus(payload.message || 'Historial borrado.');
+  } catch (error) {
+    setStatus(error.message || 'No fue posible borrar el historial.', true);
+  }
+}
+
+async function deleteRecentSearch(query) {
+  if (!query) {
+    setStatus('No se pudo identificar la busqueda a borrar.', true);
+    return;
+  }
+
+  try {
+    const response = await fetch(`/api/recent-searches/item?q=${encodeURIComponent(query)}`, {
+      method: 'DELETE',
+    });
+    const payload = await response.json();
+
+    if (!response.ok) {
+      throw new Error(payload.error || 'No fue posible borrar esa busqueda.');
+    }
+
+    await loadRecentSearches();
+    setStatus(payload.message || 'Busqueda eliminada del historial.');
+  } catch (error) {
+    setStatus(error.message || 'No fue posible borrar esa busqueda.', true);
   }
 }
 
@@ -159,4 +213,14 @@ recentSearchesToggle.addEventListener('click', async () => {
   if (isHidden) {
     await loadRecentSearches();
   }
+});
+
+clearHistoryButton.addEventListener('click', async () => {
+  const confirmed = window.confirm('Se borrara todo el historial de busquedas guardado.');
+
+  if (!confirmed) {
+    return;
+  }
+
+  await clearRecentSearches();
 });

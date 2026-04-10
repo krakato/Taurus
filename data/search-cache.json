@@ -1,232 +1,155 @@
 {
-  "github copilot": {
-    "query": "github copilot",
-    "count": 10,
-    "fetchedAt": "2026-04-10T08:48:37.805252+00:00",
-    "results": [
-      {
-        "title": "GitHub Copilot",
-        "url": "https://grokipedia.com/page/GitHub_Copilot",
-        "snippet": "GitHub Copilot is an AI-powered coding assistant that provides real-time code suggestions, completions, and conversational support to developers within integrated...",
-        "source": "grokipedia.com",
-        "image": "https://grokipedia.com/icon-512x512.png"
-      },
-      {
-        "title": "GitHub Copilot · Your AI pair programmer",
-        "url": "https://github.com/features/copilot",
-        "snippet": "GitHubCopilotworks alongside you directly in your editor, suggesting whole lines or entire functions for you.",
-        "source": "github.com",
-        "image": "https://images.ctfassets.net/8aevphvgewt8/5IdZ8KizWhMOGixAmVSw0g/f81f5f263a88eabe5d3e102300d44a88/github-copilot-social-img.png"
-      },
-      {
-        "title": "GitHub Copilot CLI: How to get started - The GitHub Blog",
-        "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-how-to-get-started/",
-        "snippet": "GitHubCopilotCLI: How to get started Discover how to useGitHubCopilotdirectly in the terminal. From cloning a repository to opening a pull request, here's how to streamline your workflow withCopilotCLI.",
-        "source": "github.blog",
-        "image": "https://github.blog/wp-content/uploads/2025/09/cli.jpg"
-      },
-      {
-        "title": "Get started with GitHub Copilot CLI: A free, hands-on course",
-        "url": "https://developer.microsoft.com/blog/get-started-with-github-copilot-cli-a-free-hands-on-course",
-        "snippet": "LearnGitHubCopilotCLI with this free, 8-chapter hands-on course. Review code, generate tests, debug issues, and build custom agents and skills - all from your terminal. No AI experience needed. Works withGitHubCopilotFree. Clone the repo or open in Codespaces to get started.",
-        "source": "developer.microsoft.com",
-        "image": "https://devblogs.microsoft.com/wp-content/uploads/2026/03/copilot-for-beginners-course.webp"
-      },
-      {
-        "title": "How to use GitHub Copilot: What it can do and real-world examples",
-        "url": "https://github.blog/ai-and-ml/github-copilot/what-can-github-copilot-do-examples/",
-        "snippet": "Learn how to useGitHubCopilot, a generative AI tool that can help you write code faster and smarter. See what it can do, from code completion and unit tests to documentation and refactoring, with real-world examples and tips.",
-        "source": "github.blog",
-        "image": "https://github.blog/wp-content/uploads/2024/09/copilot-header-1.png"
-      },
-      {
-        "title": "GitHub Copilot in VS Code",
-        "url": "https://code.visualstudio.com/docs/copilot/overview",
-        "snippet": "GitHubCopilotin VS CodeGitHubCopilotbrings AI agents to Visual Studio Code. Describe what you want to build, and an agent plans the approach, writes the code, and verifies the result across your entire project. Choose fromCopilot'sbuilt-in agents, third-party agents from providers like Anthropic and OpenAI, or your own custom agents, and run them locally, in the background, or in the ...",
-        "source": "code.visualstudio.com",
-        "image": "https://code.visualstudio.com/opengraphimg/generated/docs/copilot/overview.webp"
-      },
-      {
-        "title": "GitHub Copilot · Plans & pricing",
-        "url": "https://github.com/features/copilot/plans",
-        "snippet": "ExploreGitHubCopilotplans for individuals and organizations, offering AI-powered coding assistance directly in your editor for enhanced productivity.",
-        "source": "github.com",
-        "image": "https://images.ctfassets.net/8aevphvgewt8/5IdZ8KizWhMOGixAmVSw0g/f81f5f263a88eabe5d3e102300d44a88/github-copilot-social-img.png"
-      },
-      {
-        "title": "Getting Started with GitHub Copilot SDK | Microsoft Community Hub",
-        "url": "https://techcommunity.microsoft.com/blog/microsoftmissioncriticalblog/getting-started-with-github-copilot-sdk/4510059",
-        "snippet": "GitHubCopilothas been a staple in developer workflows for a while — it suggests code, completes functions, and generally keeps you from looking up that one...",
-        "source": "techcommunity.microsoft.com",
-        "image": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/images/bS00NTEwMDU5LVpETTlrNg?revision=1"
-      },
-      {
-        "title": "GitHub Copilot",
-        "url": "https://github.com/copilot",
-        "snippet": "GitHubis where people build software. More than 150 million people useGitHubto discover, fork, and contribute to over 420 million projects.",
-        "source": "github.com",
-        "image": "https://github.githubassets.com/assets/copilot-chat-ee053e45453d.png"
-      },
-      {
-        "title": "GitHub Copilot - Visual Studio Marketplace",
-        "url": "https://marketplace.visualstudio.com/items?itemName=GitHub.copilot",
-        "snippet": "GitHubCopilotis an AI peer programming tool that helps you write code faster and smarter.GitHubCopilotadapts to your unique needs allowing you to select the best model for your project, customize chat responses with custom instructions, and utilize agent mode for AI-powered, seamlessly integrated peer programming sessions.",
-        "source": "marketplace.visualstudio.com",
-        "image": "https://GitHub.gallerycdn.vsassets.io/extensions/github/copilot/1.388.0/1761326434179/Microsoft.VisualStudio.Services.Icons.Default"
-      }
-    ]
-  },
-  "sadam hussein": {
-    "query": "sadam hussein",
-    "count": 10,
-    "fetchedAt": "2026-04-10T08:50:35.203902+00:00",
-    "results": [
-      {
-        "title": "The capture ofSaddamHussein(2003) | 60 Minutes Archive - YouTube",
-        "url": "https://www.youtube.com/watch?v=l1sK0_-2ngs",
-        "snippet": "Twenty years after the invasion of Iraq, a look back at the December 2003 capture ofSaddamHussein, a watershed moment in the Iraq War.",
-        "source": "www.youtube.com",
-        "image": "https://i.ytimg.com/vi/l1sK0_-2ngs/maxresdefault.jpg"
-      },
-      {
-        "title": "Saddamhusseinhi-res stock photography and images - Page 2 - Alamy",
-        "url": "https://www.alamy.com/stock-photo/saddam-hussein.html?page=2",
-        "snippet": "SADDAMHUSSEINPlaying cards showingSaddamand his most wanted staff issued by US-Coalition forces in 1991 during the Iraq Wa Stock PhotoSADDAMHUSSEINPlaying cards...",
-        "source": "www.alamy.com",
-        "image": null
-      },
-      {
-        "title": "829Saddamhusseinరాయల్టీ-రహిత చిత్రాలు... | Shutterstock",
-        "url": "https://www.shutterstock.com/te/search/saddam-hussein",
-        "snippet": "SaddamHusseinin uniform from the obverse side of Iraqi twenty five dinars by central bank of Iraq 1986, that also features Scene of the Battle of Al-Qadisiyyah with horsemen with swords...",
-        "source": "www.shutterstock.com",
-        "image": null
-      },
-      {
-        "title": "Questo Pin è stato scoperto daSaddamHussein. Scopri...",
-        "url": "https://www.pinterest.com/pin/470415123558832272/",
-        "snippet": "SaddamHussain.HusseinChalayan 1998. SadamHusseinHiding Place.SaddamHussein| صدام حسين المجيد. Board containing this Pin. التاريخ.",
-        "source": "www.pinterest.com",
-        "image": "https://i.pinimg.com/736x/11/18/df/1118dffcd5a57b25608ca4c6c0023b76.jpg"
-      },
-      {
-        "title": "SaddamHussein",
-        "url": "https://www.facebook.com/Saddam1Hussein/",
-        "snippet": "The site owner hides the web page description.",
-        "source": "www.facebook.com",
-        "image": null
-      },
-      {
-        "title": "RanaSaddamHussein(@rana_sad39) • Instagram photos and videos",
-        "url": "https://www.instagram.com/rana_sad39/",
-        "snippet": "The site owner hides the web page description.",
-        "source": "www.instagram.com",
-        "image": null
-      },
-      {
-        "title": "Iraq's most wanted - where are they now? - BBC News",
-        "url": "https://www.bbc.com/news/world-middle-east-11155798",
-        "snippet": "SaddamHusseinwas the Ace of Spades. Others were mostly senior members of the Baath Party or Revolutionary Command Council (RCC).",
-        "source": "www.bbc.com",
-        "image": "https://static.files.bbci.co.uk/core/website/assets/static/news/images/metadata/poster-1024x576.5f404a8b8b.png"
-      },
-      {
-        "title": "42.901SaddamFoto's en afbeeldingen van hoge... - Getty Images",
-        "url": "https://www.gettyimages.nl/fotos/saddam",
-        "snippet": "SaddamHussein, Vice President of the Republic of Iraq, June 1972. Iraq leaderSaddamHusseinduring one-day visit to Cairo for talks with Egyptian President Hosni Mubarak.",
-        "source": "www.gettyimages.nl",
-        "image": "https://www.gettyimages.nl/sign-in/assets/static/white-f114c2d21e50f9b239ac.svg"
-      },
-      {
-        "title": "SaddamGIFகள் | Tenor",
-        "url": "https://tenor.com/ta/search/saddam-gifs",
-        "snippet": "a diagram of addamhussein's hiding place showing the entrance hidden by bricks and rubble. #saddam-hussein. a man with a mustache is wearing a military uniform with gold epaulets.",
-        "source": "tenor.com",
-        "image": "https://media1.tenor.com/m/XikvBXS6blMAAAAC/saddam-hussein-laughing.gif"
-      },
-      {
-        "title": "Antigone Is GivingSaddam| TikTok",
-        "url": "https://www.tiktok.com/discover/antigone-is-giving-saddam",
-        "snippet": "TikTok video from Thanocroc (@thanocroc): “Saddamhusseinhiding spot #saddam#minecraft #minecraftmeme #minecraftmemes #mcyt”. original soundThanocroc. 446.8K.",
-        "source": "www.tiktok.com",
-        "image": null
-      }
-    ]
-  },
   "tutorial css3": {
     "query": "tutorial css3",
     "count": 10,
-    "fetchedAt": "2026-04-10T08:52:08.234333+00:00",
+    "fetchedAt": "2026-04-10T09:04:36.564162+00:00",
     "results": [
       {
-        "title": "CSSTutorial",
-        "url": "https://www.w3schools.com/css/default.asp",
-        "snippet": "This CSStutorialcontains over 700 CSS examples. With our online editor, you can edit the CSS, and click on a button to view the result.",
-        "source": "www.w3schools.com",
-        "image": "https://www.w3schools.com/images/w3schools_logo_436_2.png"
+        "title": "CSS3 Tutorial - An Ultimate Guide for Beginners",
+        "url": "https://www.tutorialrepublic.com/css-tutorial/",
+        "snippet": "CSSTutorialsfor Beginners - Learn the fundamentals of the latestCSS3style sheet language in simple and easy steps and create beautifully designed website.",
+        "source": "www.tutorialrepublic.com",
+        "image": "https://www.tutorialrepublic.com/lib/images/signature.png"
       },
       {
-        "title": "W3SchoolsTutorials| Learn HTML, CSS, JavaScript, and More",
-        "url": "https://www.w3schools.in/",
-        "snippet": "W3schoolsTutorials& Courses. Learn programming for free with our latest online learning resources with simple examples.",
+        "title": "Welcome - The complete CSS3 tutorial",
+        "url": "https://css3-tutorial.net/",
+        "snippet": "CSS, short for Cascading Style Sheets, is the primary language used to describe look and formatting for webpages across the Internet and documents of markup (e.g. HTML and XML) in general. If you want to work with designing your own webpages, you need to be able to understand and write CSS. Lucky for you, you've come to the right place, because in thistutorial, you will be able to learn ...",
+        "source": "css3-tutorial.net",
+        "image": null
+      },
+      {
+        "title": "CSS Tutorial - GeeksforGeeks",
+        "url": "https://www.geeksforgeeks.org/css/css-tutorial/",
+        "snippet": "Learn CSS with GeeksforGeeks' comprehensivetutorial, covering everything from basics to advanced concepts for web development enthusiasts.",
+        "source": "www.geeksforgeeks.org",
+        "image": "https://media.geeksforgeeks.org/wp-content/cdn-uploads/gfg_200x200-min.png"
+      },
+      {
+        "title": "CSS3 Tutorial Index - W3Schools",
+        "url": "https://www.w3schools.in/css3/tutorials/",
+        "snippet": "Enhance your web development skills with our comprehensivetutorialsonCSS3. Learn advanced styling properties, animations, and responsive design techniques to create visually appealing and interactive web pages.",
         "source": "www.w3schools.in",
         "image": "https://www.w3schools.in/wp-content/uploads/w3schools-logo.png"
       },
       {
-        "title": "css3tutorial:CSS3TUTORIALS",
-        "url": "https://css3tutorials.blogspot.com/2009/09/css-3-tutorials.html",
-        "snippet": "CSS3TUTORIALS. CSS is a formatting language, used to provide more customised web pages and make it easier to make multiple pages use the same style.",
-        "source": "css3tutorials.blogspot.com",
-        "image": "https://resources.blogblog.com/img/icon18_email.gif"
+        "title": "CSS Tutorial",
+        "url": "https://www.tutorialspoint.com/css/index.htm",
+        "snippet": "This CSStutorialcovers everything from basic styling concepts and selectors to advanced techniques, such as flexbox, grid, animations, and CSS variables. This CSStutorialis designed to help both beginners and experienced designers to make them masters in creating visually appealing, responsive, and modern web designs.",
+        "source": "www.tutorialspoint.com",
+        "image": "https://www.tutorialspoint.com/images/tp_logo_436.png"
       },
       {
-        "title": "Learn the basictutorialof How to make navigation bars by usingCSS3",
-        "url": "https://www.djamware.com/post/css3-tutorial-navigation-bars",
-        "snippet": "In thistutorial, you'll learn about theCSS3navigation bar. I'll show you how to make a simple navigation bar that is easy to learn by beginners.",
-        "source": "www.djamware.com",
-        "image": "https://s3-ap-southeast-1.amazonaws.com/djamblog/article-300520100600.png"
+        "title": "CSS Tutorials - MDN",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Tutorials",
+        "snippet": "Learning CSS may be a daunting task. In order to help you, we have written numeroustutorialsabout CSS. Some are aimed at complete beginners, while others present complex features to be used by more experienced users.",
+        "source": "developer.mozilla.org",
+        "image": null
       },
       {
-        "title": "css3tutorials|Css3tutorial, Web design, Admin panel template",
-        "url": "https://www.pinterest.com/pin/35-useful-css3-tutorials-to-boost-your-skills--324048135662661514/",
-        "snippet": "Css Padding ShorthandTutorial. Css Pseudo-class Examples. Css Lock Technique.Css3Projects For Practice. Css Padding Example.",
-        "source": "www.pinterest.com",
-        "image": "https://i.pinimg.com/736x/2c/fb/61/2cfb61c869446868479a0e4f5161d0c6.jpg"
+        "title": "CSS3 Tutorial | CSS3 new properties, css2 vs css3",
+        "url": "https://tutorial.techaltum.com/css3.html",
+        "snippet": "css3Tutorial, learncss3with code,css3new features,css3tutorialswith examples and live code. LearnCSS3online.",
+        "source": "tutorial.techaltum.com",
+        "image": "https://tutorial.techaltum.com/images/css-3.jpg"
       },
       {
-        "title": "Tailwind CSSTutorial- YouTube",
-        "url": "https://www.youtube.com/playlist?list=PL4cUxeGkcC9gpXORlEHjc5bgnIi5HEGhw",
-        "snippet": "Tailwind CSSTutorial. 19 видео 2 469 055 просмотров Обновлен 22 июл. 2020 г. Сохранить плейлист.",
-        "source": "www.youtube.com",
-        "image": "https://www.gstatic.com/ac/cb/youtube_logo_v2.svg"
+        "title": "CSS3 Tutorial - An Ultimate Beginner's Guide To Master Web Design",
+        "url": "https://www.testmuai.com/blog/css3-tutorial/",
+        "snippet": "CSS3Tutorial- An Ultimate Beginner's Guide To Master Web Design Ready to create beautiful web designs? Discover the power ofCSS3with our comprehensivetutorial. Master the latest dynamic and responsive effects features that will wow your users.",
+        "source": "www.testmuai.com",
+        "image": "https://assets.testmuai.com/resources/uploads/2023/04/unnamed20-202023-04-11T183659.806.png"
       },
       {
-        "title": "Image Zoom In On Hover UsingCSS3",
-        "url": "https://talkerscode.com/webtricks/image-zoom-in-on-hover-using-css3.php",
-        "snippet": "In thistutorialwe will show you how to Zoom In And Zoom Out Images On Hover UsingCSS3.",
-        "source": "talkerscode.com",
-        "image": "https://talkerscode.com/webtricks/images/image_zoomin.jpg"
+        "title": "CSS 3 Tutorial — Beginner to Advance Level — TutorialBrain",
+        "url": "https://www.tutorialbrain.com/css/css_home/",
+        "snippet": "CompleteCSS3Tutorial- Master CSS from beginner to advanced level. LearnCSS3with examples to become front end designer. CSS Introduction",
+        "source": "www.tutorialbrain.com",
+        "image": "https://i0.wp.com/www.tutorialbrain.com/wp-content/uploads/2019/02/CSS_tutorials_logo.jpg?fit=1024%2C768&ssl=1"
       },
       {
-        "title": "CSS Pagination Examples",
-        "url": "http://www-db.deis.unibo.it/courses/TW/DOCS/w3schools/css/css3_pagination.asp.html",
-        "snippet": "Well organized and easy to understand Web buldingtutorialswith lots of examples of how to use HTML, CSS, JavaScript, SQL, PHP, and XML.Powered by W3.CSS.",
-        "source": "www-db.deis.unibo.it",
-        "image": "http://www-db.deis.unibo.it/images/colorpicker.gif"
+        "title": "CSS Tutorial - W3Schools",
+        "url": "https://www.w3schools.com/Css/",
+        "snippet": "CSS References At W3Schools you will find complete CSS references of all properties and selectors with syntax, examples, browser support, and more.",
+        "source": "www.w3schools.com",
+        "image": "https://www.w3schools.com/images/w3schools_logo_436_2.png"
+      }
+    ]
+  },
+  "datagrid ui": {
+    "query": "datagrid ui",
+    "count": 10,
+    "fetchedAt": "2026-04-10T09:05:20.166936+00:00",
+    "results": [
+      {
+        "title": "MUI DataGrid Examples: Comprehensive Guide for React Developers",
+        "url": "https://medium.com/@aleksej.gudkov/mui-datagrid-examples-comprehensive-guide-for-react-developers-3831544efc66",
+        "snippet": "The Material-UIDataGrid(part of MUI, formerly Material-UI) is a robust and highly customizable component for displaying and manipulating data in React applications. Its features include ...",
+        "source": "medium.com",
+        "image": null
       },
       {
-        "title": "Blogger Dropdown Navigation Basic Html Codes Template",
-        "url": "https://cssdropdownmenu.github.io/css3-mega-drop-down-menus-tutorial.html",
-        "snippet": "Useful CSS List StyleTutorialand Example -Css3Drop Down Menus Examples. Free courses for CSS: Core ConceptsCss3Jquery Dropdown Menu.",
-        "source": "cssdropdownmenu.github.io",
-        "image": "https://cssdropdownmenu.github.io/data/images/menu_files/home.png"
+        "title": "React DataGrid - Enterprise-Grade Open Source Data Grid Component",
+        "url": "https://reactdatagrid.dev/",
+        "snippet": "High-performance ReactDataGridwith 100+ features: virtual scrolling, infinite scroll, tree data, market data streaming, cell renderers, column filters, and more.",
+        "source": "reactdatagrid.dev",
+        "image": "https://bhushanpoojary.github.io/react-open-source-datagrid-view/logo.png"
       },
       {
-        "title": "Учебник CSS — это учебное пособие, которое помогает освоить...",
-        "url": "https://www.schoolsw3.com/css/",
-        "snippet": "Мы создали несколько адаптивных шаблонов SW3.CSS для вашего использования. Вы можете свободно изменять, сохранять, делиться и использовать их во всех своих проектах.",
-        "source": "www.schoolsw3.com",
-        "image": "https://www.schoolsw3.com/schoolsw3_logo_436_2.png"
+        "title": "DataGridPro API - MUI X",
+        "url": "https://mui.com/x/api/data-grid/data-grid-pro/",
+        "snippet": "DataGridPro API API reference docs for the React DataGridPro component. Learn about the props, CSS, and other APIs of this exported module. Demos For examples and details on the usage of this React component, visit the component demo pages:DataGridDataGridPro DataGridPremium",
+        "source": "mui.com",
+        "image": "https://mui.com/edge-functions/og-image?product=MUI X&title=DataGridPro API&description=API reference docs for the React DataGridPro component. Learn about the props, CSS, and other APIs of this exported module."
+      },
+      {
+        "title": "How to Use MUI DataGrid Well and Save Precious Time",
+        "url": "https://blogs.purecode.ai/blogs/mui-data-grid",
+        "snippet": "TheDataGridPro edition of MaterialUIprovides the most advanced features available for data display in React applications. Its community version offers a rich feature set, while the Pro edition unlocks pinned columns, tree data, row grouping, and column group headers—ideal for interactive and organized data management.",
+        "source": "blogs.purecode.ai",
+        "image": "https://blogs.purecode.ai/blogs/wp-content/uploads/2023/11/How-to-Use-MUI-Data-Grid-and-Save-Time-1.png"
+      },
+      {
+        "title": "Components / DataGrid - Docs ⋅ Storybook",
+        "url": "https://storybooks.fluentui.dev/react/?path=/docs/components-datagrid--docs",
+        "snippet": "FluentUIReact Components is a set ofUIcomponents and utilities resulting from an effort to converge the set of React based component libraries in production today: @fluentui/react and @fluentui/react-northstar.",
+        "source": "storybooks.fluentui.dev",
+        "image": "https://react.fluentui.dev/fluentui-banner-meta.png"
+      },
+      {
+        "title": "React Data Grid component - MUI X",
+        "url": "https://mui.com/x/react-data-grid/",
+        "snippet": "Overview The MUI XDataGridis a TypeScript-based React component that presents information in a structured format of rows and columns. It provides developers with an intuitive API for implementing complex use cases; and end users with a smooth experience for manipulating an unlimited set of data. The Grid's theming features are designed to be frictionless when integrating with MaterialUI...",
+        "source": "mui.com",
+        "image": "https://mui.com/edge-functions/og-image?product=MUI X&title=React Data Grid component&description=A fast and extensible React data table and React data grid, with filtering, sorting, aggregation, and more."
+      },
+      {
+        "title": "Data Grid - Quickstart - MUI X",
+        "url": "https://mui.com/x/react-data-grid/quickstart/",
+        "snippet": "Install the MUI XDataGridpackage and start building your React data table.",
+        "source": "mui.com",
+        "image": "https://mui.com/edge-functions/og-image?product=MUI X&title=Data Grid - Quickstart&description=Install the MUI X Data Grid package and start building your React data table."
+      },
+      {
+        "title": "React Data Grid Overview - KendoReact - Telerik",
+        "url": "https://www.telerik.com/kendo-react-ui/components/grid",
+        "snippet": "The KendoReactDataGridis a powerful component for creating responsive, accessible, and customizable applications that require the displaying and management of large datasets. Jumpstart Your Grid With the AgenticUIGenerator, you can build components and layouts using natural language prompts — directly inside AI-powered IDEs like VS Code and Cursor. Get intelligent assistance with ...",
+        "source": "www.telerik.com",
+        "image": null
+      },
+      {
+        "title": "GitHub - mui/mui-x: MUI X: Build complex and data-rich applications ...",
+        "url": "https://github.com/mui/mui-x",
+        "snippet": "MUI X is a suite of advanced ReactUIcomponents for a wide range of complex use cases. Each component provides best-in-class UX and DX, with sophisticated UX workflows for data-rich applications. Components include theDataGrid,Date and Time Pickers, Charts, and Tree View. MUI X extends the core functionality of MaterialUI, but the advanced components also stand on their own and can be ...",
+        "source": "github.com",
+        "image": "https://repository-images.githubusercontent.com/260240241/b985093c-1f45-45e0-8b7a-7fd35a26d0cf"
+      },
+      {
+        "title": "Data Grid - Filtering - MUI X",
+        "url": "https://mui.com/x/react-data-grid/filtering/",
+        "snippet": "DataGrid- Filtering Easily filter your rows based on one or several criteria. The filters can be modified through theDataGridinterface in several ways: By opening the column menu and clicking the Filter menu item. By clicking the Filters button in theDataGridtoolbar (if enabled). Each column type has its own filter operators. The demo below lets you explore all the operators for each ...",
+        "source": "mui.com",
+        "image": "https://mui.com/edge-functions/og-image?product=MUI X&title=Data Grid - Filtering&description=Easily filter your rows based on one or several criteria."
       }
     ]
   }

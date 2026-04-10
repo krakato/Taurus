@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import os
 import threading
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
@@ -25,6 +26,41 @@ USER_AGENT = (
 
 app = Flask(__name__, template_folder="templates", static_folder="static")
 cache_lock = threading.Lock()
+
+
+def build_content_security_policy() -> str:
+    directives = {
+        "default-src": ["'self'"],
+        "script-src": ["'self'"],
+        "style-src": ["'self'", "https://fonts.googleapis.com"],
+        "font-src": ["'self'", "https://fonts.gstatic.com", "data:"],
+        "img-src": ["'self'", "https:", "data:"],
+        "connect-src": ["'self'"],
+        "object-src": ["'none'"],
+        "base-uri": ["'self'"],
+        "form-action": ["'self'"],
+        "frame-ancestors": ["'none'"],
+    }
+    return "; ".join(
+        f"{directive} {' '.join(sources)}" for directive, sources in directives.items()
+    )
+
+
+def build_meta_content_security_policy() -> str:
+    directives = {
+        "default-src": ["'self'"],
+        "script-src": ["'self'"],
+        "style-src": ["'self'", "https://fonts.googleapis.com"],
+        "font-src": ["'self'", "https://fonts.gstatic.com", "data:"],
+        "img-src": ["'self'", "https:", "data:"],
+        "connect-src": ["'self'"],
+        "object-src": ["'none'"],
+        "base-uri": ["'self'"],
+        "form-action": ["'self'"],
+    }
+    return "; ".join(
+        f"{directive} {' '.join(sources)}" for directive, sources in directives.items()
+    )
 
 
 def ensure_cache_file() -> None:
@@ -144,7 +180,17 @@ def search_web(query: str) -> list[dict]:
 
 @app.get("/")
 def index():
-    return render_template("index.html")
+    return render_template("index.html", meta_csp=build_meta_content_security_policy())
+
+
+@app.after_request
+def apply_security_headers(response):
+    response.headers["Content-Security-Policy"] = build_content_security_policy()
+    response.headers["Referrer-Policy"] = "strict-origin-when-cross-origin"
+    response.headers["X-Content-Type-Options"] = "nosniff"
+    response.headers["X-Frame-Options"] = "DENY"
+    response.headers["Permissions-Policy"] = "geolocation=(), microphone=(), camera=()"
+    return response
 
 
 @app.get("/api/search")
@@ -197,6 +243,38 @@ def api_recent_searches():
     return jsonify({"items": payload})
 
 
+@app.post("/api/recent-searches/clear")
+def api_clear_recent_searches():
+    save_cache({})
+    return jsonify({"message": "Historial borrado."})
+
+
+@app.delete("/api/recent-searches/item")
+def api_delete_recent_search_item():
+    query = request.args.get("q", "")
+    normalized_query = normalize_query(query)
+
+    if not normalized_query:
+        return jsonify({"error": "Debes indicar la busqueda a borrar."}), 400
+
+    cache = load_cache()
+    if normalized_query not in cache:
+        return jsonify({"error": "La busqueda indicada no existe en el historial."}), 404
+
+    del cache[normalized_query]
+    save_cache(cache)
+    return jsonify({"message": "Busqueda eliminada del historial."})
+
+
 if __name__ == "__main__":
     ensure_cache_file()
-    app.run(debug=True, host="127.0.0.1", port=5000)
+    debug_enabled = os.getenv("FLASK_DEBUG", "0") == "1"
+    host = os.getenv("HOST", "127.0.0.1")
+    port = int(os.getenv("PORT", "5000"))
+
+    if debug_enabled:
+        app.run(debug=True, host=host, port=port)
+    else:
+        from waitress import serve
+
+        serve(app, host=host, port=port)
