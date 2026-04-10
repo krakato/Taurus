@@ -9,7 +9,7 @@
 2. Sitúate en la carpeta del proyecto:
 
 ```powershell
-cd SANDBOX\SearchWeb
+cd /tu ruta de carpeta /SearchWeb
 ```
 
 3. Si es la primera vez que lo ejecutas en este equipo, instala las dependencias:
