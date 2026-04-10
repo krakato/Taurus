@@ -9,19 +9,19 @@
 2. Sitúate en la carpeta del proyecto:
 
 ```powershell
-cd B:\SANDBOX\SearchWeb
+cd SANDBOX\SearchWeb
 ```
 
 3. Si es la primera vez que lo ejecutas en este equipo, instala las dependencias:
 
 ```powershell
-C:/Python313/python.exe -m pip install -r requirements.txt
+Python313/python.exe -m pip install -r requirements.txt
 ```
 
 4. Inicia la aplicacion:
 
 ```powershell
-C:/Python313/python.exe app.py
+Python313/python.exe app.py
 ```
 
 5. Cuando veas que el servidor esta levantado, abre Google Chrome.
@@ -63,13 +63,13 @@ http://127.0.0.1:5000
 2. Comprueba que el comando ejecutado fue este:
 
 ```powershell
-C:/Python313/python.exe app.py
+Python313/python.exe app.py
 ```
 
 3. Si da error de dependencias, vuelve a ejecutar:
 
 ```powershell
-C:/Python313/python.exe -m pip install -r requirements.txt
+Python313/python.exe -m pip install -r requirements.txt
 ```
 
 4. Si el puerto 5000 estuviera ocupado, cierra la instancia anterior del programa y vuelve a arrancarlo.
