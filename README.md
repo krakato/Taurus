@@ -112,11 +112,9 @@ Paso a paso:
 
 Mientras ese terminal siga abierto, la aplicación seguirá funcionando. Si cierras el terminal, el servidor se detiene.
 
-Si quieres, también te lo añado al README.md para que quede documentado ahí.
-
 No abras el archivo HTML directamente con doble clic ni con una ruta file:// porque este proyecto funciona como aplicacion web con backend en Python y necesita el servidor local para responder a las busquedas.
 
-Desde el terminal donde la arrancaste, lo normal es pulsar Ctrl + C. Eso detiene el servidor y devuelve el control al terminal.
+Detener el buscador. Desde el terminal donde la arrancaste, lo normal es pulsar Ctrl + C. Eso detiene el servidor y devuelve el control al terminal.
 
 Si la ejecutaste en el terminal integrado de VS Code:
 
@@ -127,5 +125,5 @@ Si la ejecutaste en el terminal integrado de VS Code:
 
 Si no responde a Ctrl + C, puedes cerrar ese terminal con el icono de la papelera en VS Code, pero eso ya es la opción más brusca.
 
-Si quieres, también puedo añadir esta instrucción al README.md.
+
 ![alt text](image.png)
