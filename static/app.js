@@ -20,15 +20,15 @@ function clearResults() {
 
 function formatDate(value) {
   if (!value) {
-    return 'Fecha no disponible';
+    return 'Date not available';
   }
 
   const date = new Date(value);
   if (Number.isNaN(date.getTime())) {
-    return 'Fecha no disponible';
+    return 'Date not available';
   }
 
-  return new Intl.DateTimeFormat('es-ES', {
+  return new Intl.DateTimeFormat(undefined, {
     dateStyle: 'short',
     timeStyle: 'short',
   }).format(date);
@@ -54,14 +54,14 @@ function renderRecentSearches(items) {
     const query = node.querySelector('.recent-search-query');
     const meta = node.querySelector('.recent-search-meta');
 
-    query.textContent = item.query || 'Busqueda sin texto';
-    meta.textContent = `${item.count || 0} resultados · ${formatDate(item.fetchedAt)}`;
+    query.textContent = item.query || 'Search without text';
+    meta.textContent = `${item.count || 0} results · ${formatDate(item.fetchedAt)}`;
     openButton.addEventListener('click', () => {
       input.value = item.query || '';
       performSearch(item.query || '');
     });
     deleteButton.addEventListener('click', async () => {
-      const confirmed = window.confirm(`Se borrara la busqueda "${item.query || 'sin texto'}" del historial.`);
+      const confirmed = window.confirm(`The search will be deleted "${item.query || 'without text'}" from the history.`);
 
       if (!confirmed) {
         return;
@@ -84,14 +84,14 @@ async function loadRecentSearches() {
     const payload = await response.json();
 
     if (!response.ok) {
-      throw new Error('No fue posible leer las busquedas guardadas.');
+      throw new Error('Unable to read recent searches.');
     }
 
     renderRecentSearches(payload.items || []);
   } catch (error) {
     const errorNode = document.createElement('p');
     errorNode.className = 'recent-searches-empty';
-    errorNode.textContent = error.message || 'No fue posible cargar las busquedas guardadas.';
+    errorNode.textContent = error.message || 'Unable to load recent searches.';
     recentSearchesList.appendChild(errorNode);
   }
 }
@@ -104,20 +104,20 @@ async function clearRecentSearches() {
     const payload = await response.json();
 
     if (!response.ok) {
-      throw new Error(payload.error || 'No fue posible borrar el historial.');
+      throw new Error(payload.error || 'Unable to clear the history.');
     }
 
     renderRecentSearches([]);
     clearResults();
-    setStatus(payload.message || 'Historial borrado.');
+    setStatus(payload.message || 'History cleared.');
   } catch (error) {
-    setStatus(error.message || 'No fue posible borrar el historial.', true);
+    setStatus(error.message || 'Unable to clear the history.', true);
   }
 }
 
 async function deleteRecentSearch(query) {
   if (!query) {
-    setStatus('No se pudo identificar la busqueda a borrar.', true);
+    setStatus('Unable to identify the search to delete.', true);
     return;
   }
 
@@ -128,13 +128,13 @@ async function deleteRecentSearch(query) {
     const payload = await response.json();
 
     if (!response.ok) {
-      throw new Error(payload.error || 'No fue posible borrar esa busqueda.');
+      throw new Error(payload.error || 'Unable to delete that search.');
     }
 
     await loadRecentSearches();
-    setStatus(payload.message || 'Busqueda eliminada del historial.');
+    setStatus(payload.message || 'Search deleted from history.');
   } catch (error) {
-    setStatus(error.message || 'No fue posible borrar esa busqueda.', true);
+    setStatus(error.message || 'Unable to delete that search.', true);
   }
 }
 
@@ -142,7 +142,7 @@ function renderResults(results) {
   clearResults();
 
   if (!results.length) {
-    setStatus('No se encontraron resultados para esa busqueda.');
+    setStatus('No results were found for that query.');
     return;
   }
 
@@ -157,32 +157,32 @@ function renderResults(results) {
     const snippet = node.querySelector('.result-snippet');
     const link = node.querySelector('.result-link');
 
-    source.textContent = result.source || 'Fuente desconocida';
-    title.textContent = result.title || 'Sin titulo';
-    snippet.textContent = result.snippet || 'Sin descripcion disponible.';
+    source.textContent = result.source || 'Unknown source';
+    title.textContent = result.title || 'No title';
+    snippet.textContent = result.snippet || 'No description available.';
     link.href = result.url;
     link.textContent = result.url;
 
     if (result.image) {
       media.hidden = false;
       image.src = result.image;
-      image.alt = `Imagen relacionada con ${result.title || 'el resultado'}`;
+      image.alt = `Image related to ${result.title || 'the result'}`;
     }
 
     fragment.appendChild(node);
   });
 
   resultsContainer.appendChild(fragment);
-  setStatus(`Se encontraron ${results.length} resultados.`);
+  setStatus(` ${results.length} Results were found.`);
 }
 
 async function performSearch(query) {
   if (!query) {
-    setStatus('Debes escribir una consulta antes de buscar.', true);
+    setStatus('You must enter a query before searching.', true);
     return;
   }
 
-  setStatus('Buscando en la web...');
+  setStatus('Searching the web...');
   clearResults();
 
   try {
@@ -190,12 +190,12 @@ async function performSearch(query) {
     const payload = await response.json();
 
     if (!response.ok) {
-      throw new Error(payload.error || 'No fue posible completar la busqueda.');
+      throw new Error(payload.error || 'Unable to complete the search.');
     }
 
     renderResults(payload.results || []);
   } catch (error) {
-    setStatus(error.message || 'Ha ocurrido un error inesperado.', true);
+    setStatus(error.message || 'An unexpected error occurred.', true);
   }
 }
 
@@ -216,7 +216,7 @@ recentSearchesToggle.addEventListener('click', async () => {
 });
 
 clearHistoryButton.addEventListener('click', async () => {
-  const confirmed = window.confirm('Se borrara todo el historial de busquedas guardado.');
+  const confirmed = window.confirm('All saved search history will be deleted.');
 
   if (!confirmed) {
     return;

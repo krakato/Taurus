@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Security-Policy" content="{{ meta_csp }}">
     <meta name="description" content="Un buscador visual con resultados web, resumen, imagen previa y enlace directo.">
+    <meta name="author" content="Goldfinger Team">
+    <meta name="keywords" content="busqueda, search, resultados, results, resumen, image previa, enlace directo, navigator, navegador, web, internet">
     <title>Taurus</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,19 +29,19 @@
               id="search-input"
               name="q"
               type="search"
-              placeholder="Escribe palabras para buscar en internet"
+              placeholder="Search on the web..."
               autocomplete="on"
               required
             >
-            <button type="submit">Buscar</button>
+            <button type="submit">Search</button>
           </div>
           <div class="search-actions">
-            <button id="recent-searches-toggle" class="secondary-button" type="button">Ver ultimas busquedas</button>
+            <button id="recent-searches-toggle" class="secondary-button" type="button">View recent searches</button>
           </div>
           <section id="recent-searches" class="recent-searches" hidden>
             <div class="recent-searches-header">
-              <h2>Ultimas busquedas guardadas</h2>
-              <button id="clear-history-button" class="secondary-button danger-button" type="button">Borrar historial</button>
+              <h2>Recent saved searches</h2>
+              <button id="clear-history-button" class="secondary-button danger-button" type="button">Clear history</button>
             </div>
             <div id="recent-searches-list" class="recent-searches-list"></div>
           </section>
@@ -47,7 +49,7 @@
       </section>
 
       <section class="results-section">
-        <div id="status" class="status">Escribe una consulta para empezar.</div>
+        <div id="status" class="status">Type a query to get started.</div>
         <div id="results" class="results-grid"></div>
       </section>
     </main>
@@ -55,13 +57,13 @@
     <template id="result-template">
       <article class="result-card">
         <div class="result-media" hidden>
-          <img alt="Vista previa del resultado">
+          <img alt="Result preview image" class="result-image">
         </div>
         <div class="result-body">
           <p class="result-source"></p>
           <h2 class="result-title"></h2>
           <p class="result-snippet"></p>
-          <a class="result-link" target="_blank" rel="noreferrer noopener">Abrir pagina</a>
+          <a class="result-link" target="_blank" rel="noreferrer noopener">Open page</a>
         </div>
       </article>
     </template>
@@ -72,7 +74,7 @@
           <span class="recent-search-query"></span>
           <span class="recent-search-meta"></span>
         </button>
-        <button class="recent-search-delete secondary-button danger-button" type="button">Borrar</button>
+        <button class="recent-search-delete secondary-button danger-button" type="button">Delete</button>
       </article>
     </template>
 
